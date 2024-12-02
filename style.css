@@ -1,486 +1,1598 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+
+@media screen and (min-width:1700px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+  }
+  
+  .logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo > h2 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  header > nav {
+    width: 60%;
+    height: 100%;
+  }
+  header > nav > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header > nav > ul > li {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header > nav > ul > li > a {
+    font-size: 1.3rem;
+    color: rgb(62, 141, 141);
+    transition: all 500ms ease-out;
+  }
+  header > nav > ul > li > a:hover {
+    color: rgb(1, 255, 255);
+  }
+  
+  .icon {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon > i {
+    font-size: 1.3rem;
+    color: rgb(62, 141, 141);
+    transition: all 500ms ease-out;
+  }
+  .icon > i:hover {
+    color: rgb(1, 255, 255);
+  }
+  /* end header */
+  
+  main {
+    width: 100%;
+    height: auto;
+  }
+  
+  .blue-part {
+    width: 100%;
+    height: 20rem;
+    background-image: linear-gradient(to bottom, rgb(62, 141, 141), gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .blue-part > h1,
+  p {
+    color: white;
+    text-align: center;
+  }
+  .blue-part > button {
+    color: rgb(62, 141, 141);
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+    transition: all 500ms ease-in-out;
+  }
+  .blue-part > button:hover {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+  }
+  
+  /* end of blue-part */
+  
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  .about > h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .about > h2 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .white-part {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  .text-part {
+    width: 50%;
+    height: 20rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    gap: 15px;
+  }
+  .text-part > h4 {
+    font-size: 1.4rem;
+  }
+  .text-part > p {
+    color: rgb(62, 141, 141);
+    text-align: left;
+  }
+  .text-part > button {
+    color: white;
+    background-color: rgb(62, 141, 141);
+    padding: 7px 20px;
+    border: none;
+    transition: all 300ms ease-in-out;
+  }
+  .text-part > button:hover {
+    color: black;
+    background-color: rgb(108, 185, 185);
+  }
+  
+  .img-part {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .border-container {
+    width: 90%;
+    height: 90%;
+    border: 5px solid rgb(62, 141, 141);
+  }
+  .img-container {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+  }
+  
+  .img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* end of white part */
+  
+  .gray-part {
+    width: 100%;
+    height: 18rem;
+    background-color: rgb(226, 226, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  main > h4 {
+    padding-top: 30px;
+    background-color: rgb(226, 226, 222);
+    font-size: 2rem;
+    text-align: center;
+  }
+  main > h4 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-1 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-1 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-1 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-1 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .card-2 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-2 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-2 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-2 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .card-3 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-3 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-3 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-3 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  /* end of gray part */
+  
+  main > h3 {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2rem;
+  }
+  main > h3 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-part {
+    width: 100%;
+    height: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .card-shadow {
+    width: 27%;
+    height: 80%;
+    transition: all 300ms ease-in;
+    background-color: rgb(228, 227, 227);
+    position: relative;
+  }
+  .label {
+    background-color: aqua;
+    padding: 5px;
+    position: absolute;
+    top: 41.7%;
+    left: 71.77%;
+  }
+  
+  .card-shadow:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 10px 15px black;
+  }
+  .card-shadow > img {
+    width: 100%;
+    height: 50%;
+    display: block;
+    object-fit: cover;
+  }
+  .card-shadow > h5 {
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .card-shadow > p {
+    text-align: left;
+    color: rgb(67, 65, 65);
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .end-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+  .end-card > i {
+    color: rgb(62, 141, 141);
+    padding: 10px;
+  }
+  .end-card > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-part-2 {
+    width: 100%;
+    height: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: -40px;
+  }
+  
+  /* end of card-part */
+  
+  .btn {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .btn > button {
+    background-color: rgb(62, 141, 141);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    transition: all 300ms ease-in;
+  }
+  .btn > button:hover {
+    color: black;
+    background-color: rgb(108, 185, 185);
+  }
+  
+  .input-part {
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(62, 141, 141);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .input-part > p {
+    padding-top: 23px;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .input-part > p > span {
+    font-size: 0.6rem;
+    color: rgb(149, 198, 218);
+  }
+  
+  .input-part > input {
+    padding: 3px;
+    padding-right: 200px;
+  }
+  .input-part > button {
+    padding: 5px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .grid-part {
+    width: 100%;
+    height: 50rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .img-box {
+    width: 26.38rem;
+    height: 25rem;
+    position: relative;
+  }
+  
+  .img-box > img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in;
+  }
+  .overlay > i {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+  
+  .img-box:hover > .overlay {
+    opacity: 0.3;
+  }
+  
+  footer {
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(50, 112, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  footer > ul > li {
+    padding: 0px 8px;
+    display: inline;
+  }
+  
+  footer > ul > li > a {
+    color: white;
+    transition: all 500ms ease-in;
+    font-size: 1.3rem;
+  }
+  
+  footer > ul > li > a:hover {
+    color: rgb(58, 95, 95);
+  }
+  
+  .i > i {
+    padding: 0px 8px;
+    display: inlin;
+    font-size: 2rem;
+    color: white;
+    transition: all 500ms ease-in;
+  }
+  .i > i:hover {
+    cursor: pointer;
+    color: rgb(98, 186, 186);
+  }
+  
 }
 
-header {
-  width: 100%;
-  height: 5rem;
-  display: flex;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1220px) and (max-width:1700px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+  }
+  
+  .logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo > h2 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  header > nav {
+    width: 60%;
+    height: 100%;
+  }
+  header > nav > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header > nav > ul > li {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header > nav > ul > li > a {
+    font-size: 1.3rem;
+    color: rgb(62, 141, 141);
+    transition: all 500ms ease-out;
+  }
+  header > nav > ul > li > a:hover {
+    color: rgb(1, 255, 255);
+  }
+  
+  .icon {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon > i {
+    font-size: 1.3rem;
+    color: rgb(62, 141, 141);
+    transition: all 500ms ease-out;
+  }
+  .icon > i:hover {
+    color: rgb(1, 255, 255);
+  }
+  /* end header */
+  
+  main {
+    width: 100%;
+    height: auto;
+  }
+  
+  .blue-part {
+    width: 100%;
+    height: 20rem;
+    background-image: linear-gradient(to bottom, rgb(62, 141, 141), gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .blue-part > h1,
+  p {
+    color: white;
+    text-align: center;
+  }
+  .blue-part > button {
+    color: rgb(62, 141, 141);
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+    transition: all 500ms ease-in-out;
+  }
+  .blue-part > button:hover {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+  }
+  
+  /* end of blue-part */
+  
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  .about > h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .about > h2 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .white-part {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  .text-part {
+    width: 50%;
+    height: 20rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    gap: 15px;
+  }
+  .text-part > h4 {
+    font-size: 1.4rem;
+  }
+  .text-part > p {
+    color: rgb(62, 141, 141);
+    text-align: left;
+  }
+  .text-part > button {
+    color: white;
+    background-color: rgb(62, 141, 141);
+    padding: 7px 20px;
+    border: none;
+    transition: all 300ms ease-in-out;
+  }
+  .text-part > button:hover {
+    color: black;
+    background-color: rgb(108, 185, 185);
+  }
+  
+  .img-part {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .border-container {
+    width: 90%;
+    height: 90%;
+    border: 5px solid rgb(62, 141, 141);
+  }
+  .img-container {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+  }
+  
+  .img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* end of white part */
+  
+  .gray-part {
+    width: 100%;
+    height: 18rem;
+    background-color: rgb(226, 226, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  main > h4 {
+    padding-top: 30px;
+    background-color: rgb(226, 226, 222);
+    font-size: 2rem;
+    text-align: center;
+  }
+  main > h4 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-1 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-1 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-1 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-1 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .card-2 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-2 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-2 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-2 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .card-3 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-3 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-3 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-3 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  /* end of gray part */
+  
+  main > h3 {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2rem;
+  }
+  main > h3 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-part {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 80px;
+  }
+  
+  .card-shadow {
+    width: 27%;
+    height: 80%;
+    transition: all 300ms ease-in;
+    background-color: rgb(228, 227, 227);
+    position: relative;
+  }
+  .label {
+    background-color: aqua;
+    padding: 5px;
+    position: absolute;
+    top: 41.7%;
+    left: 71.77%;
+  }
+  
+  .card-shadow:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 10px 15px black;
+  }
+  .card-shadow > img {
+    width: 100%;
+    height: 50%;
+    display: block;
+    object-fit: cover;
+  }
+  .card-shadow > h5 {
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .card-shadow > p {
+    text-align: left;
+    color: rgb(113, 105, 105);
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .end-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+  .end-card > i {
+    color: rgb(62, 141, 141);
+    padding: 10px;
+  }
+  .end-card > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-part-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: -40px;
+  }
+  
+  /* end of card-part */
+  
+  .btn {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 100px;
+  }
+  .btn > button {
+    background-color: rgb(62, 141, 141);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    transition: all 300ms ease-in;
+  }
+  .btn > button:hover {
+    color: black;
+    background-color: rgb(108, 185, 185);
+  }
+  
+  .input-part {
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(62, 141, 141);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .input-part > p {
+    padding-top: 23px;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .input-part > p > span {
+    font-size: 0.6rem;
+    color: rgb(149, 198, 218);
+  }
+  
+  .input-part > input {
+    padding: 3px;
+    padding-right: 200px;
+  }
+  .input-part > button {
+    padding: 5px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 3px;
+  }
+  
+
+
+
+
+  .grid-part {
+    width: 100%;
+    height: 61rem;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    justify-items: center;
+    background-color: rgb(62, 141, 141);
+    gap: 0.5rem;
+  }
+  
+  .img-box {
+    width: 25rem;
+    height: 20rem;
+    position: relative;
+  }
+  
+  .img-box > img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in;
+  }
+  .overlay > i {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+  
+  .img-box:hover > .overlay {
+    opacity: 0.3;
+  }
+  
+  footer {
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(50, 112, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  footer > ul > li {
+    padding: 0px 8px;
+    display: inline;
+  }
+  
+  footer > ul > li > a {
+    color: white;
+    transition: all 500ms ease-in;
+    font-size: 1.3rem;
+  }
+  
+  footer > ul > li > a:hover {
+    color: rgb(58, 95, 95);
+  }
+  
+  .i > i {
+    padding: 0px 8px;
+    display: inlin;
+    font-size: 2rem;
+    color: white;
+    transition: all 500ms ease-in;
+  }
+  .i > i:hover {
+    cursor: pointer;
+    color: rgb(98, 186, 186);
+  }
+  
 }
 
-.logo {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo > h2 > span {
-  color: rgb(62, 141, 141);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:700px) and (max-width:1220px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+  }
+  
+  .logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo > h2 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  header > nav {
+    width: 60%;
+    height: 100%;
+  }
+  header > nav > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header > nav > ul > li {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header > nav > ul > li > a {
+    font-size: 1.3rem;
+    color: rgb(62, 141, 141);
+    transition: all 500ms ease-out;
+  }
+  header > nav > ul > li > a:hover {
+    color: rgb(1, 255, 255);
+  }
+  
+  .icon {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon > i {
+    font-size: 1.3rem;
+    color: rgb(62, 141, 141);
+    transition: all 500ms ease-out;
+  }
+  .icon > i:hover {
+    color: rgb(1, 255, 255);
+  }
+  /* end header */
+  
+  main {
+    width: 100%;
+    height: auto;
+  }
+  
+  .blue-part {
+    width: 100%;
+    height: 20rem;
+    background-image: linear-gradient(to bottom, rgb(62, 141, 141), gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .blue-part > h1,
+  p {
+    color: white;
+    text-align: center;
+  }
+  .blue-part > button {
+    color: rgb(62, 141, 141);
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+    transition: all 500ms ease-in-out;
+  }
+  .blue-part > button:hover {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+  }
+  
+  /* end of blue-part */
+  
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+  .about > h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .about > h2 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .white-part {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  .text-part {
+    width: 50%;
+    height: 20rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    gap: 15px;
+  }
+  .text-part > h4 {
+    font-size: 1.4rem;
+  }
+  .text-part > p {
+    color: rgb(62, 141, 141);
+    text-align: left;
+  }
+  .text-part > button {
+    color: white;
+    background-color: rgb(62, 141, 141);
+    padding: 7px 20px;
+    border: none;
+    transition: all 300ms ease-in-out;
+  }
+  .text-part > button:hover {
+    color: black;
+    background-color: rgb(108, 185, 185);
+  }
+  
+  .img-part {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .border-container {
+    width: 90%;
+    height: 90%;
+    border: 5px solid rgb(62, 141, 141);
+  }
+  .img-container {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+  }
+  
+  .img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* end of white part */
+  
+  .gray-part {
+    width: 100%;
+    height: 18rem;
+    background-color: rgb(226, 226, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  main > h4 {
+    padding-top: 30px;
+    background-color: rgb(226, 226, 222);
+    font-size: 2rem;
+    text-align: center;
+  }
+  main > h4 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-1 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-1 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-1 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-1 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .card-2 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-2 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-2 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-2 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  .card-3 {
+    width: 25%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .card-3 > p > span {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  .card-3 > p {
+    color: black;
+    text-align: left;
+  }
+  .card-3 > i {
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgb(62, 141, 141);
+  }
+  
+  /* end of gray part */
+  
+  main > h3 {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2rem;
+  }
+  main > h3 > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-part {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 80px;
+  }
+  
+  .card-shadow {
+    width: 27%;
+    height: 80%;
+    transition: all 300ms ease-in;
+    background-color: rgb(228, 227, 227);
+    position: relative;
+  }
+  .label {
+    background-color: aqua;
+    padding: 5px;
+    position: absolute;
+    top: 41.7%;
+    left: 71.77%;
+  }
+  
+  .card-shadow:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 10px 15px black;
+  }
+  .card-shadow > img {
+    width: 100%;
+    height: 50%;
+    display: block;
+    object-fit: cover;
+  }
+  .card-shadow > h5 {
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .card-shadow > p {
+    text-align: left;
+    color: rgb(67, 65, 65);
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .end-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  .end-card > i {
+    color: rgb(62, 141, 141);
+    padding: 10px;
+  }
+  .end-card > span {
+    color: rgb(62, 141, 141);
+  }
+  
+  .card-part-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: -40px;
+  }
+  
+  /* end of card-part */
+  
+  .btn {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 20px; 
+    padding-top: 20px; 
+  }
+  
+  .btn > button {
+    background-color: rgb(62, 141, 141);
+    color: rgb(222, 206, 206);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    transition: all 300ms ease-in;
+  }
+  .btn > button:hover {
+    color: black;
+    background-color: rgb(108, 185, 185);
+  }
+  
+  .input-part {
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(62, 141, 141);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .input-part > p {
+    padding-top: 23px;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .input-part > p > span {
+    font-size: 0.6rem;
+    color: rgb(149, 198, 218);
+  }
+  
+  .input-part > input {
+    padding: 3px;
+    padding-right: 200px;
+  }
+  .input-part > button {
+    padding: 5px 20px;
+    background-color: aqua;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .grid-part {
+    width: 100%;
+    height: 101.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    background-color: rgb(62, 141, 141);
+    gap: 0.5rem;
+  }
+  
+  .img-box {
+    width: 26.38rem;
+    height: 25rem;
+    position: relative;
+  }
+  
+  .img-box > img {
+    display: block;
+    object-fit: cover;
+    width: 26.38rem;
+    height: 25rem;
+  }
+  
+  .overlay {
+    width: 26.38rem;
+    height: 25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in;
+  }
+  .overlay > i {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+  
+  .img-box:hover > .overlay {
+    opacity: 0.3;
+  }
+  
+  footer {
+    width: 100%;
+    height: 15rem;
+    background-color: rgb(50, 112, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  footer > ul > li {
+    padding: 0px 8px;
+    display: inline;
+  }
+  
+  footer > ul > li > a {
+    color: white;
+    transition: all 500ms ease-in;
+    font-size: 1.3rem;
+  }
+  
+  footer > ul > li > a:hover {
+    color: rgb(58, 95, 95);
+  }
+  
+  .i > i {
+    padding: 0px 8px;
+    display: inlin;
+    font-size: 2rem;
+    color: white;
+    transition: all 500ms ease-in;
+  }
+  .i > i:hover {
+    cursor: pointer;
+    color: rgb(98, 186, 186);
+  }
+  
 }
 
-header > nav {
-  width: 60%;
-  height: 100%;
-}
-header > nav > ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
 
-header > nav > ul > li {
-  width: 15%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header > nav > ul > li > a {
-  font-size: 1.3rem;
-  color: rgb(62, 141, 141);
-  transition: all 500ms ease-out;
-}
-header > nav > ul > li > a:hover {
-  color: rgb(1, 255, 255);
-}
 
-.icon {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.icon > i {
-  font-size: 1.3rem;
-  color: rgb(62, 141, 141);
-  transition: all 500ms ease-out;
-}
-.icon > i:hover {
-  color: rgb(1, 255, 255);
-}
-/* end header */
 
-main {
-  width: 100%;
-  height: auto;
-}
 
-.blue-part {
-  width: 100%;
-  height: 20rem;
-  background-image: linear-gradient(to bottom, rgb(62, 141, 141), gray);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 
-.blue-part > h1,
-p {
-  color: white;
-  text-align: center;
-}
-.blue-part > button {
-  color: rgb(62, 141, 141);
-  background-color: white;
-  border: none;
-  border-radius: 2px;
-  padding: 10px 20px;
-  transition: all 500ms ease-in-out;
-}
-.blue-part > button:hover {
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-  border: 2px solid white;
-}
 
-/* end of blue-part */
 
-.about {
-  width: 100%;
-  height: auto;
-  padding: 30px;
-}
-.about > h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-.about > h2 > span {
-  color: rgb(62, 141, 141);
-}
 
-.white-part {
-  width: 100%;
-  height: 20rem;
-  display: flex;
-  gap: 30px;
-  padding-bottom: 50px;
-}
-.text-part {
-  width: 50%;
-  height: 20rem;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: self-start;
-  gap: 15px;
-}
-.text-part > h4 {
-  font-size: 1.4rem;
-}
-.text-part > p {
-  color: rgb(62, 141, 141);
-  text-align: left;
-}
-.text-part > button {
-  color: white;
-  background-color: rgb(62, 141, 141);
-  padding: 7px 20px;
-  border: none;
-  transition: all 300ms ease-in-out;
-}
-.text-part > button:hover {
-  color: black;
-  background-color: rgb(108, 185, 185);
-}
 
-.img-part {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.border-container {
-  width: 90%;
-  height: 90%;
-  border: 5px solid rgb(62, 141, 141);
-}
-.img-container {
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  top: 10%;
-  left: 8%;
-}
 
-.img-container > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* end of white part */
 
-.gray-part {
-  width: 100%;
-  height: 18rem;
-  background-color: rgb(226, 226, 222);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
 
-main > h4 {
-  padding-top: 30px;
-  background-color: rgb(226, 226, 222);
-  font-size: 2rem;
-  text-align: center;
-}
-main > h4 > span {
-  color: rgb(62, 141, 141);
-}
 
-.card-1 {
-  width: 25%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-.card-1 > p > span {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.card-1 > p {
-  color: black;
-  text-align: left;
-}
-.card-1 > i {
-  font-size: 3rem;
-  padding: 20px;
-  background-color: rgb(62, 141, 141);
-}
 
-.card-2 {
-  width: 25%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-.card-2 > p > span {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.card-2 > p {
-  color: black;
-  text-align: left;
-}
-.card-2 > i {
-  font-size: 3rem;
-  padding: 20px;
-  background-color: rgb(62, 141, 141);
-}
 
-.card-3 {
-  width: 25%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-.card-3 > p > span {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.card-3 > p {
-  color: black;
-  text-align: left;
-}
-.card-3 > i {
-  font-size: 3rem;
-  padding: 20px;
-  background-color: rgb(62, 141, 141);
-}
 
-/* end of gray part */
 
-main > h3 {
-  display: block;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 2rem;
-}
-main > h3 > span {
-  color: rgb(62, 141, 141);
-}
 
-.card-part {
-  width: 100%;
-  height: 27rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
 
-.card-shadow {
-  width: 27%;
-  height: 80%;
-  transition: all 300ms ease-in;
-  background-color: rgb(228, 227, 227);
-  position: relative;
-}
-.label {
-  background-color: aqua;
-  padding: 5px;
-  position: absolute;
-  top: 41.7%;
-  left: 71.77%;
-}
 
-.card-shadow:hover {
-  transform: translateY(-3px);
-  box-shadow: 10px 10px 15px black;
-}
-.card-shadow > img {
-  width: 100%;
-  height: 50%;
-  display: block;
-  object-fit: cover;
-}
-.card-shadow > h5 {
-  text-align: left;
-  font-size: 1.2rem;
-  padding: 10px;
-}
-.card-shadow > p {
-  text-align: left;
-  color: rgb(67, 65, 65);
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
-.end-card {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-}
-.end-card > i {
-  color: rgb(62, 141, 141);
-  padding: 10px;
-}
-.end-card > span {
-  color: rgb(62, 141, 141);
-}
 
-.card-part-2 {
-  width: 100%;
-  height: 27rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  margin-top: -40px;
-}
 
-/* end of card-part */
 
-.btn {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  padding-bottom: 20px;
-}
-.btn > button {
-  background-color: rgb(62, 141, 141);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  transition: all 300ms ease-in;
-}
-.btn > button:hover {
-  color: black;
-  background-color: rgb(108, 185, 185);
-}
 
-.input-part {
-  width: 100%;
-  height: 10rem;
-  background-color: rgb(62, 141, 141);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.input-part > p {
-  padding-top: 23px;
-  font-size: 1.5rem;
-  text-align: left;
-}
-.input-part > p > span {
-  font-size: 0.6rem;
-  color: rgb(149, 198, 218);
-}
 
-.input-part > input {
-  padding: 3px;
-  padding-right: 200px;
-}
-.input-part > button {
-  padding: 5px 20px;
-  background-color: aqua;
-  border: none;
-  border-radius: 3px;
-}
 
-.grid-part {
-  width: 100%;
-  height: 50rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-items: center;
-  background-color: rgb(62, 141, 141);
-}
 
-.img-box {
-  width: 26.38rem;
-  height: 25rem;
-  position: relative;
-}
 
-.img-box > img {
-  display: block;
-  object-fit: cover;
-  width: 26.38rem;
-  height: 25rem;
-}
 
-.overlay {
-  width: 26.38rem;
-  height: 25rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 300ms ease-in;
-}
-.overlay > i {
-  color: rgb(255, 255, 255);
-  font-size: 2rem;
-}
 
-.img-box:hover > .overlay {
-  opacity: 0.3;
-}
 
-footer {
-  width: 100%;
-  height: 15rem;
-  background-color: rgb(50, 112, 112);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 25px;
-}
 
-footer > ul > li {
-  padding: 0px 8px;
-  display: inline;
-}
 
-footer > ul > li > a {
-  color: white;
-  transition: all 500ms ease-in;
-  font-size: 1.3rem;
-}
 
-footer > ul > li > a:hover {
-  color: rgb(58, 95, 95);
-}
 
-.i > i {
-  padding: 0px 8px;
-  display: inlin;
-  font-size: 2rem;
-  color: white;
-  transition: all 500ms ease-in;
-}
-.i > i:hover {
-  cursor: pointer;
-  color: rgb(98, 186, 186);
-}
+
+
